@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Gemini TTS (Русский)",
+  "description": "Преобразование текста в речь с использованием модели Gemini 2.5 Flash TTS. Поддержка выбора голоса, стиля и скорости речи.",
+  "requestFramePermissions": []
+}

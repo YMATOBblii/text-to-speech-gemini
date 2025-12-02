@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini TTS Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar for text area and dropdowns - iOS Style */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #C7C7CC;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #AEAEB2;
+      }
+      
+      textarea::-webkit-scrollbar {
+        width: 6px;
+      }
+      textarea::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      textarea::-webkit-scrollbar-thumb {
+        background: #C7C7CC;
+        border-radius: 3px;
+      }
+      textarea::-webkit-scrollbar-thumb:hover {
+        background: #AEAEB2;
+      }
+
+      /* Animations */
+      @keyframes fadeScale {
+        from { opacity: 0; transform: scale(0.98); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes zoomIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      .animate-fade-scale {
+        animation: fadeScale 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+      
+      .animate-zoom-in {
+        animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-[linear-gradient(to_bottom,_#E0E7FF,_#F1F5F9)] min-h-screen text-slate-800 font-sans antialiased selection:bg-indigo-100 selection:text-indigo-600 overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
