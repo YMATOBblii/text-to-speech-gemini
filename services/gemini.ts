@@ -64,11 +64,11 @@ export const generateSpeech = async (
   voice: VoiceName,
   stylePrompt: string
 ): Promise<string> => {
-  if (!process.env.API_KEY) {
+  if (!import.meta.env.VITE_API_KEY) {
     throw new Error("API Key is missing.");
   }
 
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ import.meta.env.VITE_API_KEY });
   
   // NOTE: Using systemInstruction with responseModalities: ['AUDIO'] causes 500 errors.
   // We place instructions in the content but separate them clearly.
